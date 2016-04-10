@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="267.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ConductLessonWindowController">
+   <children>
+      <TableView fx:id="tableViewVocabel" layoutX="14.0" layoutY="9.0" prefHeight="228.0" prefWidth="734.0">
+        <columns>
+          <TableColumn fx:id="columnGermanWord" prefWidth="209.0" text="german" />
+          <TableColumn fx:id="columnForeignWord" prefWidth="215.0" />
+            <TableColumn fx:id="columnVocabelState" prefWidth="309.0" text="state" />
+        </columns>
+      </TableView>
+      <TextField fx:id="textFieldForeignWord" layoutX="791.0" layoutY="206.0" onAction="#textFieldForeignWordEnterPressed" prefHeight="31.0" prefWidth="387.0" />
+      <Label fx:id="labelGermanWord" layoutX="791.0" layoutY="179.0" prefHeight="21.0" prefWidth="387.0" />
+      <Label layoutX="14.0" layoutY="245.0" text="Stats:" />
+      <Label fx:id="lablePercent" layoutX="88.0" layoutY="245.0" prefHeight="17.0" prefWidth="195.0" />
+      <Label fx:id="lableProgress" layoutX="312.0" layoutY="245.0" prefHeight="17.0" prefWidth="174.0" />
+   </children>
+</AnchorPane>

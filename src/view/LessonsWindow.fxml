@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="267.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LessonsWindowController">
+   <children>
+      <ListView fx:id="listViewFiles" layoutX="10.0" layoutY="10.0" onMouseClicked="#listViewFilesSelectionChanged" prefHeight="247.0" prefWidth="412.0" AnchorPane.bottomAnchor="10.0" />
+      <Button fx:id="buttonStart" layoutX="640.0" layoutY="203.0" mnemonicParsing="false" onAction="#buttonStartClicked" text="Start" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="10.0" />
+      <Label fx:id="labelLanguage" layoutX="427.0" layoutY="197.0" prefHeight="17.0" prefWidth="94.0" AnchorPane.rightAnchor="229.0" />
+      <Label fx:id="labelVocabelsCount" layoutX="526.0" layoutY="197.0" prefHeight="17.0" prefWidth="94.0" />
+      <Button fx:id="buttonDelete" layoutX="432.0" layoutY="236.0" mnemonicParsing="false" onAction="#buttonDeleteClicked" text="Delete" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="260.0" />
+      <Button fx:id="buttonGenerateVocabelFile" layoutX="492.0" layoutY="236.0" mnemonicParsing="false" onAction="#buttonGenerateVocabelFileClicked" text="To Vocabel File" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="130.0" />
+      <Button fx:id="buttonBack" layoutX="640.0" layoutY="236.0" mnemonicParsing="false" onAction="#buttonBackClicked" text="Back" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+      <Button fx:id="buttonEdit" layoutX="594.0" layoutY="236.0" mnemonicParsing="false" onAction="#buttonEditClicked" prefHeight="17.0" prefWidth="51.0" text="Edit" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="70.0" />
+   </children>
+</AnchorPane>
