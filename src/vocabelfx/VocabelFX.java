@@ -5,12 +5,16 @@
  */
 package vocabelfx;
 
+import db.DbHelper;
+import file.ReadFile;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.scene.image.Image;
+import model.Lesson;
+import runnables.UnitSynchronizerRunnable;
 
 
 /**
@@ -39,6 +43,8 @@ public class VocabelFX extends Application {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        Thread t = new Thread(new UnitSynchronizerRunnable());
+        t.start();
         launch(args);
     }
     
