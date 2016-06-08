@@ -1,7 +1,7 @@
 package file;
 
 import org.apache.pdfbox.pdmodel.PDDocument;
-import controller.FilePathHelper;
+import helper.FilePathHelper;
 import java.io.IOException;
 import java.io.BufferedWriter;
 import java.nio.file.Files;
