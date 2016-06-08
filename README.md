@@ -1,7 +1,18 @@
 # VocabelTrainerFx
 A helpful tool for learning and organizing your vocabels.
 
-------Licenses------
+# Screenshots
+
+### Main Window
+![MainWindow](screenshots/MainWindow.PNG?raw=true "MainWindow")
+
+### Create a new lesson for learning
+![CreateLessonWindow](screenshots/CreateLessonWindow.PNG?raw=true "CreateLessonWindow")
+
+### Go through a lesson
+![ConductLessonWindow](screenshots/ConductLessonWindow.PNG?raw=true "ConductLessonWindow")
+
+# Licenses
 
 Apache Common
 -------------
