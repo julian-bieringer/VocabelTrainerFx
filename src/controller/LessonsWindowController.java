@@ -5,6 +5,7 @@
  */
 package controller;
 
+import helper.FilePathHelper;
 import file.ReadFile;
 import file.WriteFile;
 import java.io.File;
@@ -66,29 +67,9 @@ public class LessonsWindowController implements Initializable {
     }    
 
     private void loadFileNames() {
-        final File folder = new File(FilePathHelper.getUserDirectory());
-        final File[] listOfFiles = folder.listFiles();
-        File[] array;
-        Lesson first = null;
-        
-        if(listOfFiles != null){
-            for (int length = (array = listOfFiles).length, i = 0; i < length; ++i) {
-                final File file = array[i];
-                if (file.isFile() && !file.getAbsolutePath().contains("VocabelFile")) {
-                    try {
-                        Lesson lesson = ReadFile.readJsonFile(file.getName());
-                        if(first == null)
-                            first = lesson;
-                        listViewFiles.getItems().add(lesson);
-                    } catch (JsonMappingException ex) {
-                        Logger.getLogger(LessonsWindowController.class.getName()).log(Level.SEVERE, null, ex);
-                    } catch (IOException ex) {
-                        Logger.getLogger(LessonsWindowController.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-
-                }
-            }
-        }
+        Lesson[] lessons = ReadFile.readAllJsonFiles();
+        Lesson first = lessons[0];
+        listViewFiles.getItems().addAll(lessons);
         if(first != null){
             labelLanguage.setText(first.getLanguage());
             labelVocabelsCount.setText("Vocabels: " + Integer.toString(first.getVocabels().size()));
